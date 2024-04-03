@@ -63,7 +63,7 @@ const todoSlice = createSlice({
     },
     deleteTodo: (state, action: PayloadAction<number>) => {
       state.todos = state.todos.filter(
-        (todo: Todo, index: number) => index !== action.payload
+        (_todo: Todo, index: number) => index !== action.payload
       );
       state.filter;
       state.searchTerm;

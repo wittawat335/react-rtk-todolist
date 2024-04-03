@@ -1,14 +1,13 @@
 import { BsPlus, BsSearch } from "react-icons/bs";
 import { FilterButtons } from "../components/FilterButton";
 import TodoList from "../components/Todo/TodoList";
-import { useAppDispatch, useAppSelector } from "../store/store";
+import { useAppDispatch } from "../store/store";
 import { useState } from "react";
 import { addTodo, updateSearchTodo } from "../store/slices/todoSlice";
 
 export default function Todo() {
   const [newTodo, setNewTodo] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
-  const todo = useAppSelector((state) => state.todos);
   const dispatch = useAppDispatch();
 
   const handleAddTodo = (text: string) => {
